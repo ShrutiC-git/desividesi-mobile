@@ -1,16 +1,23 @@
-import * as React from "react";
-import { View, Text } from "react-native";
+<script src="http://localhost:8097"></script>
+import React from 'react';
+import Main from './components/MainComponent';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/es/integration/react';
+import { ConfigureStore } from './components/redux/configureStore';
+import { Loading } from './components/LoadingComponent';
 
-export default function App() {
-  return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Universal React with Expo</Text>
-    </View>
-  );
+const { persistor, store } = ConfigureStore();
+
+export default class App extends React.Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <PersistGate
+          loading={<Loading/>}
+          persistor={persistor}>
+          <Main />
+        </PersistGate>
+      </Provider>
+    );
+  }
 }
