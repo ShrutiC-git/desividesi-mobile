@@ -1,0 +1,13 @@
+{
+    "expo": {
+        "icon": "./icon.png",
+        "version": "3.26.0",
+        "name": "shopping",
+        "ios":{
+            "bundleIdentifier":"com.richshruti.shopping"
+        },
+        "android":{
+            "package":"com.richshruti.shopping"
+        }
+    }
+}

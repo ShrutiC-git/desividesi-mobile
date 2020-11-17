@@ -36,10 +36,10 @@ const CustomDrawerContentComponent = (props) => (
     <ScrollView>
         <SafeAreaView style=
             {styles.container}
-            forceInset={{ top: 'always', horizontal: 'never' }}>
+            forceInset={{ top: 'never', horizontal: 'never' }}>
             <View style={styles.drawerHeader}>
                 <View style={{ flex: 1 }}>
-                    <Image source={require('./images/logo.jpeg')}
+                    <Image source={require('./images/logo_transparent.png')}
                         style={styles.drawerImage} />
                 </View>
                 <View style={{ flex: 2 }}>

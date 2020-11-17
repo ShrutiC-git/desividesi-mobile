@@ -36,14 +36,14 @@ function RenderItem(props) {
         }
     };
 
-    const recognizeDragRight = (dx => {
+    const recognizeDragRight = dx => {
         if (dx < -200) {
             return true;
         }
         else {
             return false;
         }
-    })
+    }
 
     const panResponder = PanResponder.create({
         onStartShouldSetPanResponder: (event, gestureState) => {
